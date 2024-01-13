@@ -5,8 +5,8 @@
 
 ifneq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_SEPOLICY_DIRS += \
-    device/voltage/sepolicy/atv/vendor
+    device/ethereal/sepolicy/atv/vendor
 endif
 
 PRODUCT_PRIVATE_SEPOLICY_DIRS += \
-   device/voltage/sepolicy/atv/private
+   device/ethereal/sepolicy/atv/private
