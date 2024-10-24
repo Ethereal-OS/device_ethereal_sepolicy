@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all products that
-# inherit from euclid
+# inherit from ethereal
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -10,22 +10,22 @@ endif
 endif
 
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
-    device/euclid/sepolicy/common/public
+    device/ethereal/sepolicy/common/public
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/euclid/sepolicy/common/private
+    device/ethereal/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/euclid/sepolicy/common/dynamic \
-    device/euclid/sepolicy/common/system
+    device/ethereal/sepolicy/common/dynamic \
+    device/ethereal/sepolicy/common/system
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/euclid/sepolicy/common/dynamic \
-    device/euclid/sepolicy/common/vendor
+    device/ethereal/sepolicy/common/dynamic \
+    device/ethereal/sepolicy/common/vendor
 endif
 
 # Include atv rules on atv product
 ifeq ($(PRODUCT_IS_ATV), true)
-include device/euclid/sepolicy/atv/sepolicy.mk
+include device/ethereal/sepolicy/atv/sepolicy.mk
 endif

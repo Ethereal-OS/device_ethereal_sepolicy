@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all exynos products
-# that inherit from euclid
+# that inherit from ethereal
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -10,14 +10,14 @@ endif
 endif
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/euclid/sepolicy/exynos/private
+    device/ethereal/sepolicy/exynos/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/euclid/sepolicy/exynos/dynamic \
-    device/euclid/sepolicy/exynos/system
+    device/ethereal/sepolicy/exynos/dynamic \
+    device/ethereal/sepolicy/exynos/system
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/euclid/sepolicy/exynos/dynamic \
-    device/euclid/sepolicy/exynos/vendor
+    device/ethereal/sepolicy/exynos/dynamic \
+    device/ethereal/sepolicy/exynos/vendor
 endif
